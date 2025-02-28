@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erfolgreich registriert</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link zur CSS-Datei -->
+    <link rel="stylesheet" href="assets/css/erfolgstyle.css">
+</head>
+<body>
+    <div class="container text-center my-5">
+        <h1>Vielen Dank für Ihre Spende!</h1>
+        <p class="lead">Ihre Angaben wurden erfolgreich übermittelt:</p>
+        <ul class="list-group">
+            <li class="list-group-item">Art der Kleidung: <span id="kleidungsart"></span></li>
+            <li class="list-group-item">Krisengebiet: <span id="krisengebiet"></span></li>
+            <li class="list-group-item">Datum und Uhrzeit: <span id="timestamp"></span></li>
+            <li class="list-group-item">Ort: <span id="ort"></span></li>
+        </ul>
+        <a href="index.html" class="btn btn-primary mt-3">Zurück zur Startseite</a>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const currentDate = new Date();
+    
+            // Daten aus der URL abrufen
+            document.getElementById("kleidungsart").textContent = urlParams.get("kleidungsart") || "Nicht angegeben";
+            document.getElementById("krisengebiet").textContent = urlParams.get("krisengebiet") || "Nicht angegeben";
+            document.getElementById("timestamp").textContent = currentDate.toLocaleString("de-DE", {
+                year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit"
+            });
+    
+            // Geolocation API aufrufen
+            fetch("https://ipapi.co/json/")
+                .then(response => response.json())
+                .then(data => {
+                    const location = `${data.city}, ${data.region}, ${data.country_name}`;
+                    document.getElementById("ort").textContent = location;
+                })
+                .catch(() => {
+                    document.getElementById("ort").textContent = "Ort konnte nicht bestimmt werden.";
+                });
+        });
+    </script>
+</body>
+</html>

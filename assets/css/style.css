@@ -1,0 +1,257 @@
+/* Globale Einstellungen */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #f0fdf4, #e8f5e9); /* Sanfte Grüntöne */
+    background-image: radial-gradient(circle at 20% 30%, rgba(56, 142, 60, 0.1) 10%, transparent 30%),
+                      radial-gradient(circle at 80% 70%, rgba(56, 142, 60, 0.1) 10%, transparent 30%);
+    background-size: cover;
+    color: #2C3E50;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navbar {
+    background: linear-gradient(to right, #66BB6A, #43A047);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff !important;
+}
+
+.navbar-brand img {
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 8px; /* Abgerundete Ecken für das Logo */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #ffffff !important;
+    padding: 8px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #FFC107 !important;
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background: linear-gradient(120deg, #2C3E50, #43A047);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    border-bottom: 5px solid #388E3C;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+header img {
+    max-width: 120px; /* Logo-Größe anpassen */
+    margin-bottom: 20px;
+    border-radius: 50%; /* Runde Form für das Logo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* Hauptbereich */
+main {
+    position: relative;
+    padding: 60px 20px;
+    border-radius: 15px;
+    z-index: 1;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Dekorative Hintergrundformen */
+main::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -50px;
+    width: 250px;
+    height: 250px;
+    background: rgba(76, 175, 80, 0.2);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+main::after {
+    content: '';
+    position: absolute;
+    bottom: -150px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: rgba(76, 175, 80, 0.15);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Card Styles */
+.card {
+    background: linear-gradient(to right, #43A047, #66BB6A); /* Smaragdgrüner Farbverlauf */
+    color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Eleganter Schatten */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 30px;
+}
+
+.card:hover {
+    transform: translateY(-8px); /* Sanfte Bewegung bei Hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Verstärkter Schatten */
+}
+
+/* Form Labels */
+.form-label {
+    font-weight: bold;
+    color: #ffffff; /* Weiß für bessere Lesbarkeit */
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+/* Eingabefelder */
+.form-control,
+.form-select {
+    background: #ffffff;
+    color: #2C3E50;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 12px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #66BB6A;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+/* Button */
+button {
+    background: linear-gradient(to right, #43A047, #66BB6A);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background: linear-gradient(to right, #388E3C, #2E7D32);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #43A047, #388E3C);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-link {
+    color: #f3f3f3;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+    color: #FFC107;
+    text-decoration: underline;
+}
+
+/* Verbesserte Responsivität für Smartphones */
+@media (max-width: 768px) {
+    
+    /*  Navigation */
+    .navbar-brand {
+        font-size: 1.5rem; 
+    }
+
+    .navbar-brand img {
+        height: 40px; 
+    }
+
+    .navbar-toggler {
+        margin-right: 10px; 
+    }
+
+    .navbar-nav {
+        text-align: center; 
+    }
+
+    /* 🔹 Header */
+    header {
+        padding: 40px 15px; 
+    }
+
+    header img {
+        max-width: 100px; 
+    }
+
+    header h1 {
+        font-size: 2rem; 
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    /* Formular-Anpassungen */
+    .form-control,
+    .form-select {
+        font-size: 1rem;
+        padding: 10px; 
+    }
+
+    .form-label {
+        font-size: 0.9rem;
+    }
+
+    /* Button-Anpassungen */
+    button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px 10px; 
+        font-size: 1rem; 
+    }
+
+    .footer-link {
+        font-size: 1rem;
+    }
+}

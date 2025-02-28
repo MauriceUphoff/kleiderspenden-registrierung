@@ -1,0 +1,93 @@
+/* Hintergrund */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #e0f7df, #d7efda); /* Grüner Farbverlauf */
+    color: #2C3E50;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Vollbildhöhe */
+}
+
+/* Karte (Container) */
+.container {
+    background: linear-gradient(to right, #43A047, #4CAF50); /* Smaragdgrün mit Farbverlauf */
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Eleganter Schatten */
+    padding: 40px 30px;
+    max-width: 600px;
+    width: 90%;
+    color: white; /* Weißer Text */
+}
+
+/* Überschrift */
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3); /* Leichter Schattentext */
+}
+
+/* Beschreibung */
+.lead {
+    font-size: 1.2rem;
+    color: #d9f2dc; /* Helles Grün für die Beschreibung */
+    margin-bottom: 20px;
+}
+
+/* Liste */
+.list-group {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.list-group-item {
+    background: rgba(255, 255, 255, 0.2); /* Transparente weiße Boxen */
+    padding: 12px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Leichte Umrandung */
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+}
+
+/* Button */
+.btn {
+    background: linear-gradient(to right, #2E7D32, #388E3C); /* Dunkles Smaragdgrün */
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #1B5E20, #2E7D32); /* Dunkler beim Hover */
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsivität */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}
